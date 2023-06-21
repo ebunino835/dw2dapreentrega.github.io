@@ -1,0 +1,169 @@
+/* font-family: 'Delicious Handrawn', cursive;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Pacifico', cursive; */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+header{
+    background-image: url('../img/header.jpg');
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: sticky;
+    top:0;
+}
+
+.header_textos h1{
+    font-weight: 500;
+    font-size: 48px;
+    color: rgba(234, 23, 185, 0.9);
+    margin-right: 80px;
+}
+
+.header_textos p{
+    
+    color: rgba(234, 23, 185, 0.9);
+    margin-top: -20px;
+    margin-left: 35px;
+    margin-right: 50px;
+}
+
+.header_textos{
+    position: relative;
+    font-family: 'Pacifico', cursive;
+    text-align: right;
+}
+
+nav{
+    position: sticky;
+    top: 200px; 
+}
+
+
+nav ul {
+    background-color:rgba(219, 141, 201, 0.9) ;
+    text-align: right;
+    padding: 5px 3px 5px 3px;
+}
+
+nav ul li a{
+    margin: 25px 10px;
+    
+}
+
+/* Box modeling*/
+nav ul li{
+    display: inline-block;
+    margin: 5px 35px;
+    
+}
+
+main{
+    display: flex;
+    top: 160px;
+
+}
+
+.articulo_derecha p{
+    padding: 25px;
+    margin: 25px;
+    text-align: justify;
+    font-size: 25px;
+}
+
+.articulo_izquierda iframe, .articulo_izquierda img {
+    width: 750px;
+    height: 450px;
+    padding: 20px 35px;
+    margin: 20px 35px;
+
+}
+
+footer{
+    /* display: inline-block; */
+    height: 70px;
+    border: 2px solid rgba(240, 105, 168, 0.6);
+}
+
+
+/* Flexbox*/
+footer ul{
+    display:  flex;
+    justify-content: space-around;
+}
+
+footer img{
+    margin: 15px 125px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Organizamos las imagenes con flexbox*/
+.naturaleza{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.naturaleza img, .gastronomia img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black; /*Utilizo esto para maquetear*/
+    margin: 15px;
+}
+
+.naturaleza div{
+    margin: 5px;
+    padding: 5px;
+}
+
+.naturaleza div p{
+    margin: 5px;
+    padding: 5px;
+    text-align: justify;
+}
+
+/* Organizando el main de actividades.html con flexbox*/
+.main_actividades, .section_actividades article{
+    display: flex;
+    margin: 15px;
+}
+
+
+.section_actividades article img, .section_actividades article .maps{
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+}
+
+main section p {
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.contacto_seccion1 h1{
+    text-align: center;
+    color: rgba(234, 23, 185, 0.9);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.contacto_seccion2{
+    position: relative;
+    left: 400px;
+    width: 500px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+.caja1_contacto, .caja2_contacto{
+    width: 350px;
+    height: 250px;
+    background-color: rgba(223, 172, 211, 0.9);
+    border: 1px solid black; /*hecho solo para maquetear*/
+}
