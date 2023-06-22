@@ -8,7 +8,11 @@ font-family: 'Pacifico', cursive; */
     list-style-type: none;
 }
 
+/* Utilizo GRID para que se ajuste al tamaño de la ventana*/
 header{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     background-image: url('../img/header.jpg');
     background-size: 100% 200px;
     background-repeat: no-repeat;
@@ -16,6 +20,7 @@ header{
     position: sticky;
     top:0;
 }
+
 
 .header_textos h1{
     font-weight: 500;
@@ -25,7 +30,6 @@ header{
 }
 
 .header_textos p{
-    
     color: rgba(234, 23, 185, 0.9);
     margin-top: -20px;
     margin-left: 35px;
@@ -54,7 +58,11 @@ nav ul li a{
     margin: 25px 10px;
     
 }
-
+nav ul li a:hover{
+    background-color:rgba(212, 33, 170, 0.9) ;
+    padding: 10px;
+    
+}
 /* Box modeling*/
 nav ul li{
     display: inline-block;
@@ -62,7 +70,7 @@ nav ul li{
     
 }
 
-main{
+.main_index{
     display: flex;
     top: 160px;
 
@@ -84,16 +92,16 @@ main{
 }
 
 footer{
-    /* display: inline-block; */
     height: 70px;
     border: 2px solid rgba(240, 105, 168, 0.6);
 }
 
 
-/* Flexbox*/
+ /* Flexbox*/
 footer ul{
-    display:  flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: auto;
 }
 
 footer img{
@@ -108,7 +116,8 @@ footer img{
     flex-wrap: wrap;
 }
 
-.naturaleza img, .gastronomia img{
+
+.naturaleza img{
     width: 200px;
     height: 200px;
     border: 1px solid black; /*Utilizo esto para maquetear*/
@@ -121,9 +130,11 @@ footer img{
 }
 
 .naturaleza div p{
+    width: 200px;
+    height: 100px;
     margin: 5px;
     padding: 5px;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Organizando el main de actividades.html con flexbox*/
@@ -147,6 +158,27 @@ main section p {
 }
 
 
+/* Maqueteando el contenido de Gastronomia con GRID*/
+.gastronomia{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    column-gap: 30px;
+    justify-items: center;
+}
+.gastronomia img{
+    width: 400px;
+    height: 400px;
+    margin: 50px;
+    padding: 25px;
+}
+
+.gastronomia img:hover{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .contacto_seccion1 h1{
     text-align: center;
     color: rgba(234, 23, 185, 0.9);
@@ -166,4 +198,43 @@ main section p {
     height: 250px;
     background-color: rgba(223, 172, 211, 0.9);
     border: 1px solid black; /*hecho solo para maquetear*/
+}
+
+
+@media(max-width:990px){
+    nav ul {
+        text-align: left;
+    }
+    nav ul li {
+        display: block;
+        position: relative;
+    }
+
+    .main_index{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_textos{
+        position: relative;
+        text-align: center;
+    }
+
+    .gastronomia{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .gastronomia img{
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+
+    footer {
+        display: none;
+    }
 }
